@@ -49,11 +49,11 @@ class CoreBaseClassFactory:
 
     @staticmethod
     def addCallback(_instance, group, callback):
-        if not _instance.callbacks.has_key(group):
+        if group not in _instance.callbacks:
             _instance.callbacks[group] = []
 
         _instance.callbacks[group].append(callback)
-        print _instance.callbacks
+        print(_instance.callbacks)
 
     @staticmethod
     def removeCallback(_instance, group, callback):

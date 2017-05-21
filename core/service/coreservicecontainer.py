@@ -24,7 +24,7 @@ class CoreServiceContainer:
         del self.mapping[name];
 
     def getService(self, name):
-        if not self.mapping.has_key(name):
+        if name not in self.mapping:
             # Log..error("Nincs ilyen service regisztrálva:  " + name);
             # ExternalInterface.call(  'alert'  ,  "Nincs ilyen service regisztrálva:  "  +  name  );
             # throw new Error("Nincs ilyen service regisztrálva:  " + name);

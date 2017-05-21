@@ -18,7 +18,7 @@ class CoreCallback(CoreBaseSender):
 
     def send(self):
         for service in self.collection:
-            print "send callback:", service
+            print("send callback:", service)
             service.addParams(self.params).execute()
 
     @staticmethod

@@ -1,4 +1,4 @@
-from ConfigParser import ConfigParser
+from configparser import ConfigParser
 
 from core.base.corebaseclassfactory import CoreBaseClassFactory
 from core.utils.log import Log

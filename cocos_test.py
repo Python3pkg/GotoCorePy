@@ -26,15 +26,15 @@ class CocosTest(CoreLayer):
         CoreCallback.addCallback(self, CoreLayer.MOTION, self.sc.getService("motion.service"))
 
     def pressService(self, params):
-        print params[CoreLayer.DATA]
+        print(params[CoreLayer.DATA])
         self.circle.do(RotateBy(360, duration=.5))
 
     def releaseService(self, params):
-        print params[CoreLayer.DATA]
+        print(params[CoreLayer.DATA])
         # self.circle.position =params[CoreLayer.DATA].get('x'), params[CoreLayer.DATA].get('y')
 
     def motionService(self, params):
-        print params[CoreLayer.DATA]
+        print(params[CoreLayer.DATA])
         self.circle.position =params[CoreLayer.DATA].get('x'), params[CoreLayer.DATA].get('y')
 
 cocos.director.director.init()

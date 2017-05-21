@@ -74,7 +74,7 @@ class CoreFileSystem(CoreBaseClass):
         try:
             os.mkdir(params[CoreFileSystem.PATH])
         except Exception as error:
-            print error
+            print(error)
 
     def serviceCopyFile(self, params):
         copyfile(params[CoreFileSystem.FROM],params[CoreFileSystem.TO])
@@ -115,8 +115,8 @@ class CoreFileSystem(CoreBaseClass):
         try:
             rmtree(params[CoreFileSystem.PATH])
         except Exception as error:
-            print "can't delete directory ", params[CoreFileSystem.PATH]
-            print error
+            print("can't delete directory ", params[CoreFileSystem.PATH])
+            print(error)
 
     def getFile(self, path, mode='r'):
         return open(path, mode)

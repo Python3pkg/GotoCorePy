@@ -14,7 +14,7 @@ class CoreLoggerMongo(CoreBaseLogger):
             self.database = self.mongo[db]
             self.collection = self.database[collection]
         except PyMongoError as error:
-            print error
+            print(error)
 
     def addLogEntry(self, message):
         if self.mongo:

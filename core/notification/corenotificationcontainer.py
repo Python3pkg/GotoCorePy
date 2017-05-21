@@ -50,7 +50,7 @@ class CoreNotificationContainer(CoreBaseClass):
         return CoreNotification(name, self.getListenersOf(name));
 
     def hasListener(self, name):
-        return self.mapping.has_key(name)
+        return name in self.mapping
 
     def getListenersOf(self, name):
         if self.hasListener(name):
